@@ -1,0 +1,50 @@
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+.cue-card {
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.cue-card .card {
+    background-color: rgba(55, 55, 55, 0.7);
+    border: none;
+    box-shadow: none;
+}
+
+.cue-card .card .card-content {
+    min-height: 150px;
+    background-color: rgba(55, 55, 55, 0.7);
+    padding-bottom: 24px;
+    position: relative;
+}
+
+.card {
+    perspective: 1000px;
+    overflow: visible;
+}
+
+#nav-mobile {
+    margin-left: 10px;
+}
+
+@media screen and (max-width: 992px) {
+    #nav-mobile li:not(:first-child) {
+        display: none;
+    }
+
+    #nav-mobile li:first-child {
+        float: right;
+    }
+
+    #nav-mobile.show li {
+        display: block;
+    }
+}

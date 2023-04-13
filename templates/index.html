@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cue Card Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+
+<body class="grey darken-4">
+    <nav class="nav-extended grey darken-3">
+        <div class="nav-wrapper">
+            <a href="#" class="brand-logo center">Cue Cards</a>
+            <ul id="nav-mobile" class="left">
+                <li><a href="#" id="import-btn" class="btn waves-effect waves-light">Import</a></li>
+                <li><a href="#" id="export-btn" class="btn waves-effect waves-light">Export</a></li>
+                <li><a href="#" id="modal-btn" class="btn waves-effect waves-light">Create Cards</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col s12">
+                <h4 class="white-text">Cue Cards</h4>
+                <div id="cue-card-container">
+                    <!-- Cue cards will be displayed here -->
+                </div>
+            </div>
+        </div>
+        <input type="file" id="import-file" style="display:none">
+    </div>
+
+    <!-- Popup Modal -->
+    <div id="popup-modal" class="modal">
+        <div class="modal-content">
+            <h4>Generate Cards</h4>
+            <div class="input-field">
+                <input id="message-input" type="text" class="validate">
+                <label for="message-input">Your Topic(s)</label>
+            </div>
+            <h5>Model:</h5>
+            <p>
+                <label>
+                    <input name="model" type="radio" value="text-davinci-003" checked />
+                    <span>GPT-3</span>
+                </label>
+            </p>
+            <p>
+                <label>
+                    <input name="model" type="radio" value="gpt-3.5-turbo" />
+                    <span>GPT-3.5</span>
+                </label>
+            </p>
+            <p>
+                <label>
+                    <input name="model" type="radio" value="gpt-4" />
+                    <span>GPT-4</span>
+                </label>
+            </p>
+        </div>
+        <div class="modal-footer">
+            <a href="#" id="send-btn" class="modal-close waves-effect waves-green btn-flat">Generate</a>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="/static/js/main.js"></script>
+</body>
+
+</html>
